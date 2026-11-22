@@ -12,6 +12,7 @@ It searches more than 160,000 products from 10 retailers in memory, in milliseco
 [![Apple Silicon](https://img.shields.io/badge/Apple%20Silicon-optimized-0A84FF)](#-performance)
 [![Dependencies](https://img.shields.io/badge/dependencies-0-34C759)](#-architecture)
 [![Search](https://img.shields.io/badge/search-%3C%205%20ms-FF9F0A)](#-performance)
+[![Release](https://img.shields.io/github/v/release/gloffler/heissepreise-macos?color=FF453A)](https://github.com/gloffler/heissepreise-macos/releases/latest)
 [![License: MIT](https://img.shields.io/badge/license-MIT-8E8E93)](LICENSE)
 
 <img src="docs/images/search-detail.png" alt="Searching for “vollmilch” with the detail pane and price history" width="900">
@@ -81,8 +82,22 @@ no third-party libraries. Data is cached locally and only downloaded again when 
 
 ## 🚀 Installation
 
+### Download (recommended)
+
+1. Download `HeissePreise-<version>-macOS-arm64.zip` from the [latest release](https://github.com/gloffler/heissepreise-macos/releases/latest).
+2. Unzip it and move **HeissePreise.app** to `/Applications`.
+3. On first launch, **right-click the app → Open**, then confirm.
+
+> [!IMPORTANT]
+> The app is ad-hoc signed, not notarized by Apple, so Gatekeeper blocks a plain double-click the first time.
+> Alternatively, clear the quarantine flag in Terminal: `xattr -dr com.apple.quarantine /Applications/HeissePreise.app`
+
+Requires **macOS 15 or later** on **Apple Silicon**.
+
+### Build from source
+
 > [!NOTE]
-> Requirements: **macOS 15 or later** and Swift 6. **The Command Line Tools are enough**; you don't need Xcode.
+> Requirements: macOS 15 or later and Swift 6. **The Command Line Tools are enough**; you don't need Xcode.
 
 ```bash
 git clone https://github.com/gloffler/heissepreise-macos.git
