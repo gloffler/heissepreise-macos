@@ -85,7 +85,8 @@ no third-party libraries. Data is cached locally and only downloaded again when 
 > Requirements: **macOS 15 or later** and Swift 6. **The Command Line Tools are enough**; you don't need Xcode.
 
 ```bash
-git clone <repo-url> supermarkt-tracker && cd supermarkt-tracker
+git clone https://github.com/gloffler/heissepreise-macos.git
+cd heissepreise-macos
 ./scripts/build-app.sh
 open build/HeissePreise.app
 ```
@@ -183,5 +184,5 @@ This is an unofficial client and is not affiliated with any of the retailers men
 
 ## 📄 License
 
-Released under the [MIT License](LICENSE).
+Released under the [MIT License](LICENSE) · © 2026 [gloffler](https://github.com/gloffler).
 Category definitions and store metadata are derived from [heissepreise](https://github.com/badlogic/heissepreise) (© 2023 Mario Zechner, MIT).
