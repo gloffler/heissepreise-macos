@@ -27,7 +27,7 @@ private struct ProductDetail: View {
         let names = ProductCategory.names(for: product.categoryCode)
         let watched = model.library.isWatched(product.key)
 
-        ScrollView {
+        InspectorScroll {
             VStack(alignment: .leading, spacing: 16) {
                 // Header
                 VStack(alignment: .leading, spacing: 8) {
@@ -295,5 +295,24 @@ struct PriceChart: View {
             }
             .frame(height: 220)
         }
+    }
+}
+
+/// Scroll container for the inspector.
+///
+/// A SwiftUI `ScrollView` inside `.inspector` swallows every click (observed on macOS 27): buttons and the
+/// range picker never fire. A plain `List` scrolls the same content and passes clicks through.
+private struct InspectorScroll<Content: View>: View {
+    @ViewBuilder var content: Content
+
+    var body: some View {
+        List {
+            content
+                .listRowSeparator(.hidden)
+                .listRowInsets(EdgeInsets())
+                .listRowBackground(Color.clear)
+        }
+        .listStyle(.plain)
+        .scrollContentBackground(.hidden)
     }
 }

@@ -16,6 +16,9 @@ struct ContentView: View {
                 searchBar
                 Divider()
                 resultArea
+                    // Empty states don't expand on their own; without this the whole column
+                    // collapses and the search bar drifts to the vertical centre.
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
                 Divider()
                 StatusBar()
             }
