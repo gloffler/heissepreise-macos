@@ -12,6 +12,7 @@ It searches more than 160,000 products from 10 retailers in memory, in milliseco
 [![Apple Silicon](https://img.shields.io/badge/Apple%20Silicon-optimized-0A84FF)](#-performance)
 [![Dependencies](https://img.shields.io/badge/dependencies-0-34C759)](#-architecture)
 [![Search](https://img.shields.io/badge/search-%3C%205%20ms-FF9F0A)](#-performance)
+[![License: MIT](https://img.shields.io/badge/license-MIT-8E8E93)](LICENSE)
 
 <img src="docs/images/search-detail.png" alt="Searching for “vollmilch” with the detail pane and price history" width="900">
 
@@ -179,3 +180,8 @@ Sources/
 
 All price data comes from **[heisse-preise.io](https://heisse-preise.io)** by Mario Zechner and contributors.
 This is an unofficial client and is not affiliated with any of the retailers mentioned.
+
+## 📄 License
+
+Released under the [MIT License](LICENSE).
+Category definitions and store metadata are derived from [heissepreise](https://github.com/badlogic/heissepreise) (© 2023 Mario Zechner, MIT).
